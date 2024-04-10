@@ -1,12 +1,12 @@
 import { Pressable, Text, TouchableOpacity, View } from "react-native";
 import styled from "styled-components";
 import { Input } from "../../components/Input";
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign } from "@expo/vector-icons";
 export const Container = styled(View)`
   background-color: ${(props) => props.theme.COLORS.gray_5};
   max-height: screen;
-  position: relative;
-
+  height: 100%;
+  align-items: center;
 `;
 export const Header = styled(View)`
   height: 120px;
@@ -23,7 +23,8 @@ export const Form = styled(View)`
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   background-color: white;
-  
+  height: 100%;
+  position: relative;
 `;
 export const FormData = styled(View)`
   flex-direction: row;
@@ -77,25 +78,26 @@ export const TitleButton = styled(Text)`
   font-size: 14px;
 `;
 export const ButtonPressable = styled(TouchableOpacity)`
-    flex-direction: row;
-    background-color: ${props=>props.theme.COLORS.gray_2};
-    padding: 16px 24px;
-    color: 'white';
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    position: absolute;
-    
+  width: 90%;
+  flex-direction: row;
+  background-color: ${(props) => props.theme.COLORS.gray_2};
+  padding: 16px 24px;
+  color: "white";
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0px;
 `;
 export const ButtonTitle = styled(Text)`
-    color: white;
-    font-family: ${props=>props.theme.FONT_Family.BOLD};
-    font-size: 14px;
+  color: white;
+  font-family: ${(props) => props.theme.FONT_Family.BOLD};
+  font-size: 14px;
 `;
-export const ButtonIcon= styled(AntDesign).attrs({
-    name: 'plus',
-    size: 18,
-    color: 'white'
+export const ButtonIcon = styled(AntDesign).attrs({
+  name: "plus",
+  size: 18,
+  color: "white",
 })``;

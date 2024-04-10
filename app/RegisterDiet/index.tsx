@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { Cicle } from "../../components/DietHistory/ListDiet/style";
 import { Input } from "../../components/Input";
 import {
@@ -41,13 +42,15 @@ export default function RegisterDiet() {
                 </TitleButton>
             </Button>
         </FormData>
+      </Form>
+      <Link href='/confirmDiet/sim' asChild>
         <ButtonPressable>
                 <ButtonIcon />
                 <ButtonTitle>
                     Nova Refeição
                 </ButtonTitle>
             </ButtonPressable>
-      </Form>
+            </Link>
     </Container>
   );
 }
